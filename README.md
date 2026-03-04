@@ -9,9 +9,6 @@ Pärast sisselogimist näeb kasutaja isiklikku tervitust ja Stripe makse nuppu. 
 
 Projekt on mõeldud õppimiseks ja demonstreerimiseks (nt programmeerimise või võrguõppe tundides).
 
-![Demo kuvatõmmis](https://via.placeholder.com/800x400?text=Demo+kuvatõmmis+(lisa+reaalne+pilt))  
-*(Asenda link päris kuvatõmmisega pärast rakenduse käivitamist)*
-
 ## Funktsionaalsus
 
 - Sisselogimine / registreerimine Auth0 kaudu (Google, e-post/parool jne)
