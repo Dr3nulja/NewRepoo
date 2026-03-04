@@ -25,14 +25,10 @@ Projekt on mõeldud õppimiseks ja demonstreerimiseks (nt programmeerimise või 
 - **Keskkonnamuutujad**: dotenv
 - **Deploy**: Render.com / Vercel / Railway / Fly.io / iga Node.js host
 
-## Demo
-
-https://sinu-domeen.onrender.com (lisa link pärast deploy'd)
 
 ## Kiire alustamine
 
 ### 1. Kloonige repositoorium
 
 ```bash
-git clone https://github.com/NikitaMakeev/sinu-repositoorium.git
-cd sinu-repositoorium
+git clone https://github.com/Dr3nulja/NewRepoo
