@@ -34,3 +34,7 @@ app.get('/health', (req, res) => {
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server tootab pordi ${PORT} peale`);
 });
+
+app.get('/payment-success', (req, res) => {
+  res.send("Makse on edukas! 🎉 Aitäh tellimuse eest.");
+});
