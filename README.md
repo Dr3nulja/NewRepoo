@@ -23,7 +23,7 @@ Projekt on mõeldud õppimiseks ja demonstreerimiseks (nt programmeerimise või 
 - **Autentimine**: express-openid-connect + Auth0
 - **Maksed**: Stripe Buy Button (kliendipoolne integratsioon)
 - **Keskkonnamuutujad**: dotenv
-- **Deploy**: Render.com / Vercel / Railway / Fly.io / iga Node.js host
+- **Deploy**: Render.com   
 
 
 ## Kiire alustamine
