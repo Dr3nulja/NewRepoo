@@ -7,6 +7,8 @@ const PocketBase = require('pocketbase/cjs'); // SDK PocketBase
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+const TURVAKOOD = "123456";
+
 // --- Настройка Auth0 ---
 const config = {
   authRequired: false,
