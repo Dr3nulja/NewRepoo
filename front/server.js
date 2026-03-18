@@ -6,6 +6,7 @@ const PocketBase = require('pocketbase/cjs'); // SDK PocketBase
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const pb = new PocketBase(process.env.POCKETBASE_URL || 'http://127.0.0.1:8080')
 
 const TURVAKOOD = "123456";
 
@@ -101,3 +102,4 @@ app.get('/grades', async (req, res) => {
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server tootab pordi ${PORT} peale`);
 });
+
