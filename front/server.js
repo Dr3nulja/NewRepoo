@@ -22,8 +22,6 @@ const config = {
 
 app.use(auth(config));
 
-// --- Подключение к PocketBase ---
-const pb = new PocketBase(process.env.PB_URL);
 
 // --- Маршрут главной страницы ---
 app.get('/', (req, res) => {
