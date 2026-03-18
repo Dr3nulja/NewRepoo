@@ -1,66 +1,12 @@
-​<!DOCTYPE html>
-<html lang="et">
-<head>
-    <meta charset="UTF-8">
-    <title>Danis Nikita</title>
-    <script src="http://pocketbase-nmv5j7cm9mgspzm6bvrl32h6.176.112.158.3.sslip.io"></script>
-</head>
-<body>
-    <h1>Meie SaaS PRO</h1>
-    <hr>
-    <h2>Päeviku sissekanded:</h2>
-    <div id="diary-content">Laadin andmeid...</div>
-
-    <script>
-        async function loadDiary() {
-            const container = document.getElementById('diary-content');
-           
-            try {
-                const config = await fetch('/config').then(res => {
-                    if (!res.ok) throw new Error('Config load failed');
-                    return res.json();
-                });
-               
-                const pb = new PocketBase(config.pbUrl);
-
-                const records = await pb.collection('diary').getFullList({
-                    sort: '-created',
-                });
-
-                container.innerHTML = '';
-
-                if (records.length === 0) {
-                    container.innerHTML = '<p>Hetkel sissekanded puuduvad.</p>';
-                    return;
-                }
-
-                records.forEach(record => {
-    const div = document.createElement('div');
-    div.className = 'entry';
-   
-    div.innerHTML = `
-        <h3>${record.student_name || 'Nimi puudub'} — ${record.subject || 'Aine puudub'}</h3>
-        <p>
-            <strong>Hinne/Skoor:</strong> ${record.score ?? '-'}<br>
-            <strong>Staatus:</strong> ${record.status ? record.status.join(', ') : 'Määramata'}
-        </p>
-        <small>Loodud: ${new Date(record.created).toLocaleString('et-EE')}</small>
-    `;
-    container.appendChild(div);
-});
-
-            } catch (error) {
-                console.error("Viga:", error);
-                if (container) {
-                    container.innerHTML = `
-                        <p style="color:red;">Viga andmete laadimisel.</p>
-                        <small>${error.message}</small>
-                    `;
-                }
-            }
-        }
-
-        window.onload = loadDiary;
-    </script>
-</body>
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback Board</title>
+  </head>
+  <body class="bg-slate-50">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
